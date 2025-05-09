@@ -1,0 +1,19 @@
+1. The data points that are required for the analysis and detection of a credit card fraud are
+- IP address: An atypical change in IP address could be an indicator of fraud
+- Account Number: For identification purposes
+- Shipping Address: An atypical change in shipping address (i.e.: to a P.O. Box) could be due to fraud
+- Transaction Date: Key in determining patterns in frequency of transactions; an atypical change in the frequency of transactions could indicate fraud
+- Transaction Time: Key in determining patterns in frequency of transactions; an atypical change in the frequency of transactions could indicate fraud
+- Transaction Value: An atypical change in transaction values could be an indicator of fraud
+- Units Purchased: An atypical change in the number of units purchased could be an indicator of fraud
+
+2. - There is a missing entry in the "Transaction Value" field in row 4, and so the value of that transaction cannot be used in the analysis of spending behaviour
+- There are 2 missing entries in the "IP Address" field in rows 6 and 10, thus changes in IP address cannot be detected
+- There are inconsistent date formats, which should be converted to a uniform format for analysis purposes
+
+3. - The IP addresses of the transactions made by user johnp change from 3.56.123.0 to 1.186.52.7. The purchases made with the latter IP address have little time between and have high transaction values. In addition to these concerns, the shipping addresses of these transactions move to In-store or a P.O. Box.
+- The IP addresses of the transactions made by user ellend change from 172.165.10.1 to 1.167.255.10. The purchase made with the latter IP address has a high transaction value and is sent to a different P.O. Box than the previous purchases.
+
+4. In the accounts where the anomalies were detected, namely users johnp and ellend, there is a large increase in transaction values beyond a certain transaction number. On the other hand, the values of the transactions of user davidg remain at a steady value.
+
+5. Descriptive analysis was used to determine a change in the purchasing patterns of the three different users in the table. At this stage, the anomalies listed previously were discovered. Then, diagnostic analysis was used to dig deeper into why these anomalies were present at all - thus, leading to the conclusion that there is most likely credit card fraud present (as long as there are no obvious explanations behind the changes in behaviour).
